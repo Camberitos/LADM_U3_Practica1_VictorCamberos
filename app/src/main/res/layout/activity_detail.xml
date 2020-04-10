@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="25dp"
+    tools:context=".DetailActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtCaptureDateDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:transitionName="captureDate"
+                android:text="Fecha de captura"/>
+
+            <TextView
+                android:id="@+id/txtDescriptionDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:transitionName="description"
+                android:text="Descripción"/>
+
+            <TextView
+                android:id="@+id/txtDeliveryDateDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:textColor="@color/colorAccent"
+                android:transitionName="deliveryDate"
+                android:text="Fecha de entrega"/>
+
+            <Button
+                android:id="@+id/btnDeleteActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eliminar Actividad"
+                android:layout_marginTop="10dp"
+                android:textSize="10sp"
+                android:background="@color/colorAccent"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="recycler"
+        android:layout_marginTop="25dp"/>
+
+</LinearLayout>
