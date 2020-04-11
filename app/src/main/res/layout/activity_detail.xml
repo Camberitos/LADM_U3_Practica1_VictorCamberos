@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="25dp"
+    android:background="#4EFFEB3B"
     tools:context=".DetailActivity">
 
     <com.google.android.material.card.MaterialCardView
@@ -37,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/cardview_dark_background"
                 android:transitionName="deliveryDate"
                 android:text="Fecha de entrega"/>
 
@@ -46,9 +47,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Eliminar Actividad"
+                android:textColor="@color/cardview_light_background"
+                android:background="@color/cardview_dark_background"
                 android:layout_marginTop="10dp"
-                android:textSize="10sp"
-                android:background="@color/colorAccent"/>
+                android:textSize="10sp" />
 
         </LinearLayout>
 

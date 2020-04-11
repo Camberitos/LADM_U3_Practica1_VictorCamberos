@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="25dp"
-        android:background="#0097A7"
+        android:background="#4EFFEB3B"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
@@ -32,7 +32,7 @@
                         android:textSize="20sp"
                         android:gravity="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
-                        android:textColor="@color/colorAccent"
+                        android:textColor="@color/cardview_dark_background"
                         android:text="Nueva Actividad"/>
 
                 </Toolbar>
@@ -45,7 +45,7 @@
                         android:id="@+id/txtDescription"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Descripción"/>
+                        android:hint="Agregar Descripción"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,39 +59,46 @@
                         android:layout_height="wrap_content"
                         android:ems="10"
                         android:inputType="date"
-                        android:hint="Fecha de entrega (YYYY-MM-DD)"/>
+                        android:hint="Fecha (YYYY-MM-DD)"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
-
-                <Button
-                    android:id="@+id/btnAddPhoto"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorAccent"
+                    android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btnAddPhoto"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/cardview_light_background"
+                    android:background="@color/cardview_dark_background"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="#FFFFFF"
                     android:layout_marginTop="20dp"
                     android:text="Agregar Fotografia"/>
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/cardview_light_background"
+                        android:background="@color/cardview_dark_background"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_marginTop="20dp"
+                        android:text="Cancelar"/>
+
+                </LinearLayout>
 
                 <Button
                     android:id="@+id/btnAdd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorAccent"
+                    android:textColor="@color/cardview_light_background"
+                    android:background="@color/cardview_dark_background"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="#FFFFFF"
                     android:layout_marginTop="20dp"
                     android:text="Agregar"/>
-
-                <Button
-                    android:id="@+id/btnCancel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorAccent"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="#FFFFFF"
-                    android:layout_marginTop="20dp"
-                    android:text="Cancelar"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewEvidence"
